@@ -1,37 +1,31 @@
-const showMenu = (toggleId, navId) => {
-    const toggle = document.getElementById(toggleId);
-    const nav = document.getElementById(navId);
+window.addEventListener("scroll", () => {
 
-    if(toggle && nav) {
-        toggle.addEventListener('click', () => {
-            nav.classList.toggle('show');
-        })
+    if (window.scrollY > 720) return;
+  
+    if (window.scrollY < 500) {
+  
+      document.getElementById("cap1").style.transform = `translateY(-${window.scrollY / 20}%)`;
+      document.getElementById("skyNight").style.transform = `translateY(-${window.scrollY / 30}%)`;
+      document.getElementById("cap2").style.transform = `translateY(-${window.scrollY / 100}%)`;
+  
+      document.getElementById("cap3").style.transform = `translateY(${window.scrollY / 30}%)`;
+      document.getElementById("cap4").style.transform = `translateY(${window.scrollY / 16}%)`;
+      document.getElementById("cap5").style.transform = `translateY(${window.scrollY / 12}%)`;
+      document.getElementById("cap6").style.transform = `translateY(${window.scrollY / 8}%)`;
+  
+      document.getElementById("sun").style.transform = `translateX(-${window.scrollY * 2}%) translateY(${window.scrollY * 1.2}%)`;
     }
-}
-
-showMenu('nav-toggle', 'nav-menu');
-
-// Rellax
-
-var rellax = new Rellax('.parallax');
-
-// GSAP
-
-gsap.from('.nav-logo', {opacity: 0, duration: 3, delay: .5, y: 30, ease:'expo.out'});
-gsap.from('.nav-toggle', {opacity: 0, duration: 3, delay: .7, y: 30, ease:'expo.out'});
-gsap.from('.nav-item', {opacity: 0, duration: 3, delay: .7, y: 35, ease:'expo.out', stagger: .2});
-
-gsap.from('.home-title', {opacity: 0, duration: 3, delay: 1.3, y: 35, ease:'expo.out'});
-gsap.from('.home-subtitle', {opacity: 0, duration: 3, delay: 1.1, y: 35, ease:'expo.out'});
-
-gsap.from('.home-scroll', {opacity: 0, duration: 3, delay: 1.5, y: 35, ease:'expo.out'});
-
-// Scroll Reveal
-
-const sr = ScrollReveal({
-    duration: 2500,
-    reset: true
-})
-
-sr.reveal('.section-data', {origin: 'left', distance: '70px'})
-sr.reveal('.section-img', {origin: 'left', distance: '90px', delay: 200})
+  
+  
+  
+    document.getElementById("cap1n").style.transform = `translateY(${window.scrollY / 7}%)`;  
+    document.getElementById("cap2n").style.transform = `translateY(${window.scrollY / 17}%)`;
+    document.getElementById("cap3n").style.transform = `translateY(${window.scrollY / 40}%)`;
+    document.getElementById("cap4n").style.transform = `translateY(-${window.scrollY / 80}%)`;
+    document.getElementById("cap5n").style.transform = `translateY(-${window.scrollY / 25}%)`;
+    document.getElementById("cap6n").style.transform = `translateY(-${window.scrollY / 10}%)`;
+    document.getElementById("moon").style.transform = `translateX(${window.scrollY * 1.5}%)`;
+  
+    console.log(window.scrollY)
+  
+  })
