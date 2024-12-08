@@ -1,0 +1,1 @@
+export { default } from "file:///Users/marceline/Documents/carlos-files/carlos-estrada-resume.github.io/node_modules/@nuxt/vite-builder/dist/runtime/vite-node.mjs"
