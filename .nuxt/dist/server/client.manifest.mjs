@@ -1,1 +1,1 @@
-export { default } from "file:///Users/marceline/Documents/carlos-files/carlos-estrada-resume.github.io/node_modules/@nuxt/vite-builder/dist/runtime/client.manifest.mjs"
+export { default } from "file:///Users/crsestrada/Documents/myfiles/my-resume/carlos-estrada-resume.github.io/node_modules/@nuxt/vite-builder/dist/runtime/client.manifest.mjs"
