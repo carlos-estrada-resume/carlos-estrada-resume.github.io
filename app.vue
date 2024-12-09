@@ -6,27 +6,42 @@
     <div class="layer"></div>
     <div class="layer"></div>
   </div>
-
   <div class="header">
     <div class="home-button">
       <span>
         {{ `${'</>'}` }}
       </span>
       <span class="text">
-        {{'Carlos Robert Estrada Resume'}}
+        {{'X'}}
       </span>
     </div>
     <div class="navigation-bar">
       <ul>
         <li><a href="#home">Home</a></li>
+        <li><a href="#contact">Contact</a></li>
         <li><a href="#portfolio">Portfolio</a></li>
         <li><a href="#download">Download</a></li>
       </ul>
     </div>
   </div>
   <div class="body">
+    <div class="upper-content">
+      <div class="title-position">
+        <span class="asd">Hey, I am</span>
+        <span class="fgh">Software Engineer.</span>
+      </div>
+      <div class="image">
+        <img src="~/assets/images/user-temp.png" alt="Discover Nuxt 3" width="400"/>
+      </div>
+    </div>
   </div>
+  <div class="footer"></div>
 </template>
+<script setup lang="ts">
+useSeoMeta({
+  ogImage: '/og-image.png'
+})
+</script>
 <style>
 body{
   background-color: #000;
@@ -93,15 +108,48 @@ body{
   color: white;
   display: flex;
   flex-direction: column;
+  .upper-content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+  .title-position {
+    display: flex;
+    flex: 2 2 0%;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+    height: 90vh;
+    .asd {
+      padding: 40px 40px 0 40px;
+      font-size: 50px;
+      font-weight: bold;
+    }
+    .fgh {
+      padding: 0 40px 40px 40px;
+      font-size: 80px;
+      font-weight: bold;
+      width: 17ch;
+      border-right: 3px solid;
+      animation: blink 1s step-end infinite, type 2.5s steps(17) forwards;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+  }
+  .image {
+    flex: 1 1 0%;
+    mask-image: gradient(linear, right top, left top, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+    -webkit-mask-image: -webkit-gradient(linear, right top, left top, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+  }
 }
 
-.text {
+/* .text {
   width: 28ch;
   border-right: 3px solid;
   animation: blink 1s step-end infinite, type 2.5s steps(28) forwards;
   overflow: hidden;
   white-space: nowrap;
-}
+} */
 
 @keyframes blink {
   50% {
