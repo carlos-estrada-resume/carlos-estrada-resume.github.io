@@ -32,6 +32,7 @@ body{
   background-color: #000;
   font-family: 'Courier New', Courier, monospace;
   color: white;
+  font-size: 20px;
 }
 
 .main {
