@@ -18,22 +18,33 @@
     <div class="navigation-bar">
       <ul>
         <li><a href="#home">Home</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li><a href="#portfolio">Portfolio</a></li>
-        <li><a href="#download">Download</a></li>
+        <li><a href="#contact">About</a></li>
+        <li><a href="#contact">Skills</a></li>
+        <li><a href="#portfolio">Projects</a></li>
+        <li><a href="#download">Contact</a></li>
       </ul>
+      <div>
+        <button class="switch-theme">
+          <UIcon name="i-carbon-moon" class="w-5 h-5" />
+        </button>
+      </div>
     </div>
   </div>
   <div class="body">
     <div class="upper-content">
       <div class="title-position">
-        <span class="asd">Hey, I am</span>
+        <span class="asd">Hey, I'm Carlos Robert Estrada</span>
         <span class="fgh">Software Engineer.</span>
       </div>
       <div class="image">
         <img src="~/assets/images/user-temp.png" alt="Discover Nuxt 3" width="400"/>
       </div>
     </div>
+  </div>
+  <div>
+    <span>
+      Experienced software developer skilled in [languages/tools] with a strong ability to design, develop, and optimize applications. Proficient in problem-solving and collaborating in agile teams to deliver high-quality solutions. Passionate about learning new technologies and improving development practices.
+    </span>
   </div>
   <div class="footer"></div>
 </template>
@@ -82,6 +93,8 @@ body{
     justify-content: center;
   }
   .navigation-bar {
+    display: flex;
+    align-items: center;
     ul {
       list-style-type: none;
       margin: 0;
@@ -100,6 +113,16 @@ body{
     }
     li a:hover:not(.active) {
       background-color: #111;
+    }
+    ul li:last-child {
+      border-right-width: 2px;
+      border-color: rgb(129, 129, 129);
+    }
+    .switch-theme {
+      display: flex;
+      align-items: center;
+      height: 58px;
+      padding: 15px;
     }
   }
   
@@ -122,14 +145,13 @@ body{
     height: 90vh;
     .asd {
       padding: 40px 40px 0 40px;
-      font-size: 50px;
+      font-size: 45px;
       font-weight: bold;
     }
     .fgh {
       padding: 0 40px 40px 40px;
       font-size: 80px;
       font-weight: bold;
-      width: 17ch;
       border-right: 3px solid;
       animation: blink 1s step-end infinite, type 2.5s steps(17) forwards;
       overflow: hidden;
