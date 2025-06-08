@@ -11,6 +11,6 @@ export default defineNuxtConfig({
   ],
   css: ["~/assets/css/main.css"],
   app: {
-    baseURL: "carlos-estrada-resume", // Match GitHub repo
+    baseURL: "carlos-estrada-resume.github.io", // Match GitHub repo
   },
 });
