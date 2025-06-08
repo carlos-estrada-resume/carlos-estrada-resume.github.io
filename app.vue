@@ -15,11 +15,13 @@
           </span>
           <ClientOnly v-if="!colorMode?.forced">
             <UButton
-              :icon="isDark ? 'i-lucide-moon' : 'i-lucide-sun'"
               class="cursor-pointer"
               color="neutral"
               variant="ghost"
-              @click="isDark = !isDark" />
+              @click="isDark = !isDark">
+              <Icon v-if="isDark" name="lucide-moon" />
+              <Icon v-else name="lucide-sun" />
+            </UButton>
             <template #fallback>
               <div class="size-8" />
             </template>
