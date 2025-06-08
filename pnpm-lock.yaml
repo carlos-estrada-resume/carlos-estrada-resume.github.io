@@ -51,6 +51,9 @@ importers:
       tailwindcss:
         specifier: ^4.1.8
         version: 4.1.8
+      unplugin-icons:
+        specifier: ^22.1.0
+        version: 22.1.0(@vue/compiler-sfc@3.5.16)
 
 packages:
 
@@ -4430,6 +4433,29 @@ packages:
       '@nuxt/kit':
         optional: true
       '@vueuse/core':
+        optional: true
+
+  unplugin-icons@22.1.0:
+    resolution: {integrity: sha512-ect2ZNtk1Zgwb0NVHd0C1IDW/MV+Jk/xaq4t8o6rYdVS3+L660ZdD5kTSQZvsgdwCvquRw+/wYn75hsweRjoIA==}
+    peerDependencies:
+      '@svgr/core': '>=7.0.0'
+      '@svgx/core': ^1.0.1
+      '@vue/compiler-sfc': ^3.0.2 || ^2.7.0
+      svelte: ^3.0.0 || ^4.0.0 || ^5.0.0
+      vue-template-compiler: ^2.6.12
+      vue-template-es2015-compiler: ^1.9.0
+    peerDependenciesMeta:
+      '@svgr/core':
+        optional: true
+      '@svgx/core':
+        optional: true
+      '@vue/compiler-sfc':
+        optional: true
+      svelte:
+        optional: true
+      vue-template-compiler:
+        optional: true
+      vue-template-es2015-compiler:
         optional: true
 
   unplugin-utils@0.2.4:
@@ -9939,6 +9965,18 @@ snapshots:
     optionalDependencies:
       '@nuxt/kit': 3.17.5(magicast@0.3.5)
       '@vueuse/core': 13.3.0(vue@3.5.16(typescript@5.8.3))
+
+  unplugin-icons@22.1.0(@vue/compiler-sfc@3.5.16):
+    dependencies:
+      '@antfu/install-pkg': 1.1.0
+      '@iconify/utils': 2.3.0
+      debug: 4.4.1
+      local-pkg: 1.1.1
+      unplugin: 2.3.5
+    optionalDependencies:
+      '@vue/compiler-sfc': 3.5.16
+    transitivePeerDependencies:
+      - supports-color
 
   unplugin-utils@0.2.4:
     dependencies:
