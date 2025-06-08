@@ -10,4 +10,7 @@ export default defineNuxtConfig({
     "@nuxt/ui",
   ],
   css: ["~/assets/css/main.css"],
+  app: {
+    baseURL: "https://carlos-estrada-resume.github.io/", // Match GitHub repo
+  },
 });
